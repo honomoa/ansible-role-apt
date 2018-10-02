@@ -1,0 +1,5 @@
+---
+
+- name: Install packages from APT
+  apt: pkg={{ item }} state=latest
+  with_items: "{{ apt_packages }}"
